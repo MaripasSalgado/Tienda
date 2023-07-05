@@ -1,7 +1,7 @@
 #tituloPrincipal{
     color: blue;
     font-size: 30px;
-    font-family: Comic Sans MS;   
+    font-family: Comic Sans MS;
 }
 
 .parrafosEjemplo{
@@ -11,16 +11,16 @@
 
 .parrafosSecundario{
     color: blueviolet;
-    
+
 }
 
 p{
     color: #6900bac;
-    
+
 }
 a{
-  color: blueviolet;
-        
+    color: blueviolet;
+
 }
 
 a:hover{
