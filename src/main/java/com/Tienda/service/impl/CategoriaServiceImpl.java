@@ -26,8 +26,8 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     }
 
-    @Transactional(readOnly = true)
     @Override
+    @Transactional(readOnly = true)
     public Categoria getCategoria(Categoria categoria) {
         return categoriaDao.findById(categoria.getIdCategoria()).orElse(null);
     }
@@ -42,5 +42,10 @@ public class CategoriaServiceImpl implements CategoriaService {
     @Transactional
     public void delete(Categoria categoria) {
         categoriaDao.delete(categoria);
+    }
+
+    @Override
+    public List<Categoria> getPorDescripcion(String descripcion) {
+        return categoriaDao.findByDescripcion(descripcion);
     }
 }
