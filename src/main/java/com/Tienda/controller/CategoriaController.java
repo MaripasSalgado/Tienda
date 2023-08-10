@@ -1,9 +1,9 @@
 
-package com.tienda.controller;
+package com.Tienda.controller;
 
-import com.tienda.domain.Categoria;
-import com.tienda.service.CategoriaService;
-import com.tienda.service.impl.FirebaseStorageServiceImpl;
+import com.Tienda.domain.Categoria;
+import com.Tienda.service.CategoriaService;
+import com.Tienda.service.impl.FirebaseStorageServiceImpl;
 import jakarta.servlet.http.HttpSession;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;

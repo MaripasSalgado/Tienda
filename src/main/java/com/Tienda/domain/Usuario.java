@@ -1,10 +1,9 @@
 
-package com.tienda.domain;
+package com.Tienda.domain;
 
 import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.List;
-import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 
 @Entity
