@@ -1,8 +1,10 @@
-package com.Tienda.controller;
 
-import com.Tienda.domain.Categoria;
-import com.Tienda.service.CategoriaService;
-import com.Tienda.service.impl.FirebaseStorageServiceImpl;
+package com.tienda.controller;
+
+import com.tienda.domain.Categoria;
+import com.tienda.service.CategoriaService;
+import com.tienda.service.impl.FirebaseStorageServiceImpl;
+import jakarta.servlet.http.HttpSession;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+
 @Controller
 @Slf4j
 @RequestMapping("/categoria")
@@ -21,12 +24,15 @@ public class CategoriaController {
     @Autowired
     CategoriaService categoriaService;
     @GetMapping("/listado")
-    public String inicio(Model model) {
+    public String inicio(Model model,HttpSession session) {
         log.info("Consumiendo el recurso /categoria/listado");
         List <Categoria> categorias= categoriaService.getCategorias(false);
        //List <Categoria> categorias= categoriaService.getPorDescripcion("Monitores");
+       //String imagen =(String) session.getAttribute("usuarioImagen");
+       // model.addAttribute("avatar", imagen);
         model.addAttribute("categorias", categorias);
         model.addAttribute("totalCategorias", categorias.size());
+        //model.addAttribute("EmailUsuario", (String)session.getAttribute("Email"));
         return "/categoria/listado";
     }
      @GetMapping("/nuevo")
