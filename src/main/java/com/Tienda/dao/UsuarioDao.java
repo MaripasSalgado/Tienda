@@ -1,7 +1,7 @@
 
-package com.tienda.dao;
+package com.Tienda.dao;
 
-import com.tienda.domain.Usuario;
+import com.Tienda.domain.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

@@ -1,10 +1,13 @@
+
 package com.Tienda.service;
 
 import com.Tienda.domain.Producto;
 import java.util.List;
 
+
+
 public interface ProductoService {
-  
+    
     // Se obtiene un listado de categorias en un List
     public List<Producto> getProductos(boolean activos);
     
@@ -27,5 +30,4 @@ public interface ProductoService {
     
      //Lista de productos utilizando consultas con SQL Nativo
     public List<Producto> metodoNativo(double precioInf, double precioSup);
-
 }
