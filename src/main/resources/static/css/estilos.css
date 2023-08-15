@@ -1,36 +1,29 @@
 #tituloPrincipal{
-    color: blue;
+    color:blue;
     font-size: 30px;
     font-family: Comic Sans MS;
 }
 
 .parrafosEjemplo{
-    color:green;
+    color:aqua;
     font-weight: bold;
 }
 
 .parrafosSecundario{
-    color: blueviolet;
-
+    color:blueviolet;
 }
-
 p{
-    color: #6900;
-
-}
-a{
-    color: blueviolet;
-
+    color:orange;
 }
 
 a:hover{
-    color: white;
+    color:white;
     background-color: black;
     font-size: 25px;
-    transition:0.9s;
+    transition: 0.9s;
 }
 
 a:active{
-    color:crimson;
-    background-color: cadetblue;
+color: crimson;
+background-color:cadetblue;
 }

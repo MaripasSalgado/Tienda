@@ -6,6 +6,7 @@ package com.Tienda.controller;
 
 import com.Tienda.dao.UsuarioDao;
 import com.Tienda.domain.Usuario;
+import com.Tienda.service.ProductoService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -20,8 +21,14 @@ public class IndexController {
     @Autowired
     UsuarioDao UsuarioDao;
     
+    @Autowired
+    ProductoService productoService;
+    
     @RequestMapping("/")
     public String page(Model model, HttpSession session) {
+        var productos = productoService.getProductos(true);
+        model.addAttribute("productos", productos);
+        
         //String imagen =(String) session.getAttribute("usuarioImagen");
         //model.addAttribute("avatar", imagen);
         //session.setAttribute("idUsuario", model);
@@ -37,6 +44,7 @@ public class IndexController {
             Usuario usuario = UsuarioDao.findByUsername(user.getUsername());
             session.setAttribute("Email", usuario.getCorreo());
         }*/
+       
         return "index";
     }
     
